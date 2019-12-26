@@ -1,0 +1,33 @@
+cd .git/
+cd /home/daniel/Work/ss15m24_test/.git/
+search .pdf
+search SWRS
+search pdf
+search swts
+search SWTS
+open_with wireshark
+rename blinky_pca1005.emProject
+search ab
+search lims
+search lims.pn
+search main.p
+search usr
+search jvm
+rename openjdk-11:q
+search media
+search Wor
+open_with Wiresharkl
+open_with Wireshark
+Q
+open_with sh
+bg
+&
+!&
+search inde
+searchPers
+search Pers
+search Wo
+search m22
+
+search test
+search .csv
