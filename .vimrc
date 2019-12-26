@@ -1,10 +1,9 @@
-" Mappings
 let mapleader="-"
 set exrc
 set secure
 " Map Esc key
 nmap qq <Esc>
-" General VIM settings
+
 set scrolloff=3
 let &colorcolumn=80
 nmap <C-n> :NERDTreeToggle<CR>
@@ -20,7 +19,7 @@ au BufNewFile, BufRead *.h, *.c
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 	
 
-"Lightline
+" Lightline
 let g:lightline = {
 	\'colorscheme': 'gruvbox',
 	\'active': {
@@ -31,7 +30,7 @@ let g:lightline = {
 	\	'gitbranch': 'fugitive#heade'
 	\},
 	\}
-"let g:lightline.colorscheme = 'gruvbox'
+let g:lightline.colorscheme = 'gruvbox'
 
 
 " YCM Settings
@@ -49,9 +48,6 @@ execute pathogen#infect()
 execute pathogen#helptags()
 syntax on
 filetype plugin indent on
-colorscheme gruvbox
-set termguicolors
-set background=dark
 let g:ale_completion_enabled = 1
 let b:ale_fixers = ['autopep8','black', 'isort', 'yapf', 'pylint', 'add_blank_lines_for_python_control_statements' ]
 let g:ale_fix_on_save = 1
