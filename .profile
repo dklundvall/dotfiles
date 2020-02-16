@@ -26,9 +26,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-export PYTHONPATH=$PYTHONPATH:"/usr/local/bin/python3.7:/home/daniel/Work/ss15m24_test"
-export ROBOT_OPTIONS='-P /home/daniel/Work/ss15m24_test/venv/lib/python3.6/site-packages:/home/daniel/Work/ss15m24_test'
-
 export TERM=screen-256color
 
 # Defaul programs
