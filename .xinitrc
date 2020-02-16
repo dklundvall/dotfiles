@@ -1,1 +1,3 @@
-/home/dklundvall/.xinitrc
+[ -f ~/.xprofile ] && . ~/.xprofile
+
+exec dwm 

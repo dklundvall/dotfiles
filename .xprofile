@@ -1,1 +1,4 @@
-/home/dklundvall/.xprofile
+#!/usr/bin/env sh
+
+wallpaper &
+xcompmgr &

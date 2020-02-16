@@ -1,1 +1,0 @@
-/home/dklundvall/.zshenv
