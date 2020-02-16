@@ -1,3 +1,1 @@
-exec dwm
-exec st
-exec terminator
+/home/dklundvall/.xinitrc
