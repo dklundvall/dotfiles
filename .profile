@@ -34,3 +34,4 @@ export TERMINAL="st"
 export BROWSER="firefox"
 export FILE="ranger"
 
+exec startx
