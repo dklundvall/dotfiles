@@ -1,0 +1,8 @@
+{
+	"python.autoComplete.addBrackets": true,
+	"python.jediEnabled": false,
+	"yaml.format.enable": true,
+	"clangd.semanticHighlighting": true
+
+
+}
