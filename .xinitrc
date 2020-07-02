@@ -1,3 +1,3 @@
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-exec dwm 
+exec dwm
