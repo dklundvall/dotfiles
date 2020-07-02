@@ -14,6 +14,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neovim/termdebug'
 Plug 'vimwiki/vimwiki'
 Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "--------- LOOKS --------------"
@@ -100,6 +101,12 @@ function! MyHighlights() abort
     hi semshiSelected        ctermfg=231 guifg=#ffffff ctermbg=161 guibg=#d7005f
 endfunction
 
+function! Refactor()
+	call inputsave()
+	let @z=input("What do you want to rename '" . @z . "' to? ")
+	call inputrestore()
+endfunction
+
 "--------- PYTHON -----------" 
 autocmd FileType python call MyHighlights()
 au BufNewFile,BufRead *.py set foldmethod=indent
@@ -127,3 +134,5 @@ nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 let mapleader = "."
 nmap 		rn		<Plug>(coc-rename)
+
+nmap <Leader>rf "zyiw:call Refactor()<cr>mx:silent! norm gd<cr>[{V%:s/<C-R>//<c-r>z/g<cr>`x
