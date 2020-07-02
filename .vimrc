@@ -1,11 +1,9 @@
 let mapleader="-"
 set exrc
 set secure
-" Map Esc key
-nmap qq <Esc>
 
 set scrolloff=3
-let &colorcolumn=80
+" let &colorcolumn=80
 nmap <C-n> :NERDTreeToggle<CR>
 " Python settings
 
@@ -17,6 +15,8 @@ au BufNewFile, BufRead *.h, *.c
 	\ set noexpandtab
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:syntastic_quiet_messages = { "regex": "[E111]" }
+imap <F5> <Esc>:w<CR>:!clear;python %<CR>
 	
 
 " Lightline
@@ -74,3 +74,8 @@ if &term =~# '256color' && ( &term =~# '^screen'  || &term =~# '^tmux' )
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
 endif
+
+
+colorscheme gruvbox
+set bg=dark
+
