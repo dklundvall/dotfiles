@@ -4,3 +4,9 @@
 [submodule ".config/zsh/plugins/fast-highlight"]
 	path = .config/zsh/plugins/fast-highlight
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule ".local/share/zsh/plugins/powerlevel10k"]
+	path = .local/share/zsh/plugins/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule ".local/share/zsh/plugins/fsh"]
+	path = .local/share/zsh/plugins/fsh
+	url = https://github.com/zdharma/fast-syntax-highlighting

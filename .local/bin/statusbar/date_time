@@ -1,0 +1,2 @@
+#!/bin/bash
+ date | awk '{print $1 " " $2 " " $3 " - " substr($4, 1, length($4)-3)}'

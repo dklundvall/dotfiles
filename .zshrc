@@ -27,7 +27,7 @@ compinit
 # End of lines added by compinstall
 
 ###### THEME ######
-source $ZSH_DATA/themes/powerlevel10k/powerlevel10k.zsh-theme
+source $ZSH_DATA/plugins/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -35,6 +35,5 @@ source $ZSH_DATA/themes/powerlevel10k/powerlevel10k.zsh-theme
 ##### ACTIVATE PLUGINS ######
 source $ZSH_DATA/themes/zsh-theme-gruvbox-dark.zsh-theme
 source $ZSH_DATA/plugins/fsh/fast-syntax-highlighting.plugin.zsh
-source $ZSH_DATA/plugins/k/k.sh
 
-
+neofetch

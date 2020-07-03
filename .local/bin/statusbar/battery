@@ -1,0 +1,6 @@
+#!/bin/sh
+
+B_STRING="Battery: "
+
+B_STRING+=$(acpi -V | awk 'NR==1{print substr($4, 1, length($2)+1)}')
+echo $B_STRING

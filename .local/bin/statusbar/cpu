@@ -1,3 +1,5 @@
 #!/usr/bin/env sh
 
-sensors | awk '/Core 0/ {print $3}'
+RET="CPU: "
+RET+=$(sensors | awk '/Core 0/ {print $3 $4}')
+echo $RET

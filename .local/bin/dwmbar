@@ -1,0 +1,14 @@
+#!/bin/bash
+STATUS_DELIM=" | "
+declare -a statuses=(battery cpu date_time)
+
+while :; do
+	STATUS_STRING=""
+	for i in ${statuses[@]}
+	do
+		STATUS_STRING+=$(eval "$i")$STATUS_DELIM
+	done
+	# echo $STATUS_STRING
+	xsetroot -name "$STATUS_STRING"
+	sleep 2s
+done
