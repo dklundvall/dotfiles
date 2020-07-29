@@ -1,6 +1,15 @@
 #!/bin/sh
 
 B_STRING="Battery: "
+ICON_CHARGE=' \xE2\x86\x91'
+ICON_DISCHARGE=' \xE2\x86\x93'
 
 B_STRING+=$(acpi -V | awk 'NR==1{print substr($4, 1, length($2)+1)}')
-echo $B_STRING
+STATUS=$(acpi -V | awk 'NR==1{print $3}')
+
+if [ $STATUS = "Discharging," ]; then
+	B_STRING+=$ICON_DISCHARGE
+else
+	B_STRING+=$ICON_CHARGE
+fi
+echo -e $B_STRING

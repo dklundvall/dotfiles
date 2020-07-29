@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+RET="Sound: "
+RET+=$(pamixer --get-volume-human)
+echo $RET

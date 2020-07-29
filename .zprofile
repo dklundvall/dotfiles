@@ -30,6 +30,8 @@ export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 export TERM=screen-256color
 
 # Defaul programs
+export SUDO_EDITOR="nvim"
+export VISUAL="nvim"
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="brave"
