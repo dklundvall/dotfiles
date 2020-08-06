@@ -25,7 +25,7 @@
 #if [ -d "$HOME/.local/bin" ] ; then
 #    PATH="$HOME/.local/bin:$PATH"
 #fi
-export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
+export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':'):$HOME/.emacs.d/bin"
 
 export TERM=screen-256color
 
@@ -41,5 +41,5 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-exec startx
+#exec startx
 
