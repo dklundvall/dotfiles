@@ -53,19 +53,18 @@
 ;; they are implemented.
 
 ;; ----------- ORG-CALDAV ------------
-(use-package org-caldav
+(use-package org-caldav)
   :init
   (setq org-caldav-url "https://emma.cloud.tabdigital.eu/remote.php/dav/calendars/dklundvall@tuta.io")
   (setq org-caldav-save-directory "~/.local/share/Nextcloud/Documents/org/")
-  (setq org-caldav-inbox "~/.local/share/Nextcloud/Documents/org/cal_inbox.org")
-  (setq org-caldav-calendars
-        '((:calendar-id "personal"
-           :files ("~/.local/share/Nextcloud/Documents/org/cal_personal.org")
-           :inbox ("~/.local/share/Nextcloud/Documents/org/cal_personal_inbox.org"))
-        (:calendar-id "outlookoffice365com"
-           :files ("~/.local/share/Nextcloud/Documents/org/cal_work.org")
-           :inbox ("~/.local/share/Nextcloud/Documents/org/cal_work_inbox.org"))
-          )
-        )
+  ;;(setq org-caldav-inbox "~/.local/share/Nextcloud/Documents/org/cal_inbox.org")
+(setq org-caldav-calendars
+      '((:calendar-id "personal"
+                      :inbox "~/.local/share/Nextcloud/Documents/org/cal_personal_inbox.org")
+	(:calendar-id "outlookoffice365com"
+                      :inbox "~/.local/share/Nextcloud/Documents/org/cal_personal_inbox.org")))
+(setq org-caldav-save-directory "~/.local/share/Nextcloud/Documents/org")
 
-  )
+(setq org-agenda-files "~/.local/share/Nextcloud/Documents/org/cal_personal_inbox.org")
+(cmake-ide-setup)
+(load-file "~/.emacs.d/stm32/stm32.el")

@@ -6,6 +6,7 @@
 ;; use 'M-x doom/reload'.
 
 (package! org-caldav)
+(package! cmake-ide)
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
 
