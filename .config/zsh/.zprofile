@@ -1,3 +1,4 @@
+#!/bin/zsh
 # ~/.profile: executed by the command interpreter for login shells.
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
 # exists.
@@ -26,6 +27,7 @@
 #    PATH="$HOME/.local/bin:$PATH"
 #fi
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
+export PATH="$PATH:$HOME/.emacs.d/bin"
 
 export TERM=screen-256color
 
@@ -41,5 +43,13 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-exec startx
+# Home cleanup
+export LESSHISTFILE="-"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
+export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
+
+exec   startx "$XDG_CONFIG_HOME/X11/xinitrc"
 
