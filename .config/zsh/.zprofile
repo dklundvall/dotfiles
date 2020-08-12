@@ -26,9 +26,7 @@
 #if [ -d "$HOME/.local/bin" ] ; then
 #    PATH="$HOME/.local/bin:$PATH"
 #fi
-export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
-export PATH="$PATH:$HOME/.emacs.d/bin"
-
+export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':'):$HOME/.emacs.d/bin"
 export TERM=screen-256color
 
 # Defaul programs

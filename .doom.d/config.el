@@ -2,8 +2,6 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-(set-face-attribute 'default nil :height 140)
-
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -20,8 +18,8 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
-;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 16)
+      doom-variable-pitch-font (font-spec :family "Source Code Variable" :size 14))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -44,7 +42,7 @@
 (setq display-line-numbers-type t)
 
 
-;; Here are some additional functions/macros that could help you configure Doom:
+; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
 ;; - `use-package!' for configuring packages
@@ -70,3 +68,12 @@
                       :inbox "~/.local/share/Nextcloud/Documents/org/cal_work.org")))
 (setq org-caldav-backup-file "~/.local/share/Nextcloud/Documents/org/org-caldav-backup.org")
 (setq org-caldav-save-directory "~/.local/share/Nextcloud/Documents/org")
+
+(setq elfeed-feeds
+      '(("https://ultralightandcomfortable.com/feed/" 
+     "https://hikinginfinland.com/atom.xml" 
+     "https://forum.manjaro.org/c/announcements.rss" 
+     "https://forum.manjaro.org/c/announcements/stable-updates.rss" 
+     "https://itsfoss.com/feed/" 
+     "https://www.archlinux.org/feeds/news/")))
+
